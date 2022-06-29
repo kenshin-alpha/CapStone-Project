@@ -60,18 +60,22 @@ export class CheckoutComponent implements OnInit {
   }
 
   message:string='';
+  cashOnDelivery:String = ""
 
   changeDB():void{
-    if(this.cardNumberVal&&this.monthVal&&this.yearVal&&this.cvvVal&&this.nameOnCardVal) {
-      let url = "http://localhost:8080/changeDB";
+    if((this.monthVal&&this.yearVal&&this.cvvVal&&this.nameOnCardVal) || (this.cashOnDelivery == 'cashOnDelivery')) {
+      if (this.cashOnDelivery != 'cashOnDelivery') {
+        let url = "http://localhost:8080/changeDB";
       this.http.get(url).subscribe(
         res => {
           console.log("DB Updated");
         },
         err => {
-          alert('Failed to update DB');
+          
         }
       )
+      }
+      
     }else{
       if(!this.cardNumberVal)
         this.message+="Card Number Not Valid \n";

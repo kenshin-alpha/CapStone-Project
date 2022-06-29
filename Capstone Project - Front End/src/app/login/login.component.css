@@ -1,64 +1,82 @@
-html, body{
-  background-color: #393939;
+body{
+  background-image: url(../../assets/images/bg1.jpg);
+  height: 870px;
+  background-size: cover;
 }
 
-.loginbody {
-  background-size:100% 100%;
-  background-color: #393939;
-  background-repeat:no-repeat;
-  color: white;
-  font: 14px Helvetica, sans-serif;
+form{
+  opacity: 0.7;
+  background-color: black;
+  margin-right: 10vw;
+  border-radius: 25px;
+  margin-left: 160px;
+  top: 25%;
+  padding: 10px;
 }
 
-label {
-  font: bold 20px Helvetica, sans-serif;
-  display: block;
-  float: left;
-  padding: 5px 10px 0 0;
-}
-
-form div {
-  overflow: hidden;
-  margin: 0 0 5px 0;
-}
-
-
-.bigbutton {
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
+h1{
   text-align: center;
-  font-size: 15px;
-  padding: 20px;
-  width: 120px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+  padding: 40px;
+  color: darkorange;
+  font-family: cursive;
 }
 
-.bigbutton span {
+.form-label{
+  display:block;
+  margin:0 auto;
+}
+
+.was-validated{
+  padding: 20px 0;
+padding-left: 220px;
+}
+#fname{
+  color: white;
+  font-family: cursive;
+  font-size: larger;
+}
+
+#logo{
+  float: left;
+  width: 140px;
+  height: 140px;
+}
+
+#btn1 , #btn2{
+  background-color: orange;
+  font-size: 24px;
+  margin-left: 13px;
+  font-family: cursive;
+  color:black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#btn2{
+  margin-left: 10px;
+}
+
+.button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  width: 120px;
   transition: 0.5s;
 }
 
-.bigbutton span:after {
+.button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
-  top: 0;
   right: -20px;
   transition: 0.5s;
 }
 
-.bigbutton:hover span {
+.button:hover span {
   padding-right: 25px;
 }
 
-.bigbutton:hover span:after {
+.button:hover span:after {
   opacity: 1;
   right: 0;
 }
-

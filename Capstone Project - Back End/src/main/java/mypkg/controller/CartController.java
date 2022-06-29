@@ -19,7 +19,7 @@ public class CartController {
 
     @PostMapping("/cart")
     public int getTotal(@RequestBody NewCart[] cart, Model model){
-        cartDaoImpl.saveToCart(cart);
+      //  cartDaoImpl.saveToCart(cart);
         return cartDaoImpl.claculateTotal(cart);
     }
 

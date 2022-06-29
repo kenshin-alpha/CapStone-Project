@@ -59,12 +59,12 @@ export class RegisterComponent implements OnInit {
       this.model.merchant = this.options.length != 4;
   }
 
-  checkPhone()
-  {
-    let matcher = new RegExp('^[+ 0-9]{10}$');
-    if (String(this.model.phone).length==10)
-      this.phoneValidation=(matcher.test(String(this.model.phone)));
-  }
+  // checkPhone()
+  // {
+  //   let matcher = new RegExp('^[+ 0-9]{10}$');
+  //   if (String(this.model.phone).length==10)
+  //     this.phoneValidation=(matcher.test(String(this.model.phone)));
+  // }
 
   checkEmail(){
     if(this.model.email.length==0)
@@ -100,7 +100,7 @@ export class RegisterComponent implements OnInit {
       },
       err=>{
         console.log([this.model]);
-        alert("An error has occurred while Registering");
+        
       }
     )
   }

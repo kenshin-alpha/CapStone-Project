@@ -79,7 +79,7 @@ export class MerchantMenuComponent implements OnInit {
         console.log(this.id);
         alert("Item Deleted Successfully!");
       },err=>{
-        alert("Failed to add item. Please Try after sometime!");
+        alert("Failed to Delete item. Please Try after sometime!");
       }
     )
     

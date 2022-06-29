@@ -1,8 +1,16 @@
-.body {
+
+ .body {
   height: -webkit-fill-available;
-  background: #393939;
+  background-image: url("../../assets/images/bg7.webp");
   color: white;
   font: 14px Helvetica, sans-serif;
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  color: darkorange;
+  font-family: cursive;
 }
 
 label {
@@ -22,6 +30,14 @@ form div {
   margin: 0 0 5px 0;
 }
 
+body{
+  background-color: rgb(24, 23, 23);
+}
+
+.total{
+  font-family: cursive;
+}
+
 .dec {
   background-position: 0 -29px;
 }
@@ -30,39 +46,35 @@ form div {
   padding: 20px 0 0 140px;
 }
 
-.bigbutton {
-  border-radius: 4px;
-  background-color: #f4511e;
+.button{
+  background: linear-gradient(
+135deg
+, #202020 0%, #ff0101 100%);
+  padding: 15px;
+  font-family: cursive;
+  margin-left: 80px;
   border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 15px;
-  padding: 20px;
-  width: 120px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 190px;
+  letter-spacing: .11rem;
+  outline:none;
 }
 
-.bigbutton span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+.button:hover
+{
+transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+cursor: pointer;
 }
 
-.bigbutton span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+#btn{
+  margin-left: 20px;
 }
 
-.bigbutton:hover span {
-  padding-right: 25px;
-}
 
 .bigbutton:hover span:after {
   opacity: 1;
@@ -79,6 +91,7 @@ form div {
 
 p{
   color: black;
+  font-family: cursive;
 }
 
 .input-align{

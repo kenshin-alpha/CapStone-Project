@@ -1,15 +1,46 @@
+
 .body {
-  background: #393939;
+  
+  font: 18px Helvetica, sans-serif;
+  font-family: cursive;
   color: white;
-  font: 14px Helvetica, sans-serif;
+  background-image: url("../../assets/images/tbg.jpg");
+  background-size: cover;
+  background-position:center;
 }
 
-p{
-  margin-left: 23%;
+body{
+  background-color: black;
+}
+#logo{
+  float: left;
+  width: 180px;
+  height: 180px;
 }
 
-table{
-  margin: auto;
+.table{
+  margin-top: 0px;
+  border-collapse: separate;
+  border-spacing: 0 1px;
+  margin-left: 0px;  
+}
+
+.card-img-top{
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+
+div.card.align-contents{
+  margin-left: -1px;
+  float: left;
+}
+
+div.card.align-contents.card-img-top{
+  float: left;
+  height: 120px;
+  width: 120px;
+  margin-left: 0px;
 }
 
 img{
@@ -49,29 +80,14 @@ form div {
   margin: 0 0 5px 0;
 }
 
-
-.bigbutton {
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 15px;
-  padding: 20px;
-  width: 120px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.bigbutton span {
+.button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.bigbutton span:after {
+.button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -80,11 +96,37 @@ form div {
   transition: 0.5s;
 }
 
-.bigbutton:hover span {
-  padding-right: 25px;
+.button{
+  background: linear-gradient(
+135deg
+, #753370 0%, #076868 100%);
+  padding: 15px;
+  font-family: cursive;
+  margin-left: 0px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  width: 200px;
+  letter-spacing: .11rem;
+  outline:none;
 }
 
-.bigbutton:hover span:after {
-  opacity: 1;
-  right: 0;
+.button:hover
+{
+transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px #38373785;
+cursor: pointer;
+}
+
+#btn{
+  margin-left: 20px;
+}
+
+.card{
+  height: 600px;
+  background-image: url("../../assets/images/card.webp");
+  background-size: cover;
 }

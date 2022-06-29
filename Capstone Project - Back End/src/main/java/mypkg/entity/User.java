@@ -13,14 +13,14 @@ public class User {
     private String lastname;
     private String email;
     private String address;
-    private int phone;
+    private long phone;
     private boolean merchant;
 
     public User() {
 
     }
 
-    public User(String username, String password, String firstname, String lastname, String email, String address, int phone,
+    public User(String username, String password, String firstname, String lastname, String email, String address, long phone,
                 boolean merchant) {
         this.username = username;
         this.password = password;
@@ -91,11 +91,11 @@ public class User {
         this.address = address;
     }
 
-    public int getPhone() {
+    public long getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
 

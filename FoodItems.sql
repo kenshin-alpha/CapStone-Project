@@ -1,0 +1,3 @@
+INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('2', 'Ice Cream', '50', '5', 'https://media.istockphoto.com/photos/front-view-of-real-edible-ice-cream-cone-with-3-different-scoops-of-picture-id1148364081');
+INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('3', 'Pizza', '120', '5', 'https://static.toiimg.com/thumb/53110049.cms?width=1200&height=900');
+INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('4', 'Fish', '250', '7', 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjM2NTI5fQ');

@@ -45,6 +45,7 @@ public class CartDaoImpl{
         if(newCarts.length>5)
         cart.setQuantity6(newCarts[6].getQuantity());
         cartDao.save(cart);
+     
     }
 
     public void updateDB(){
@@ -89,7 +90,7 @@ public class CartDaoImpl{
     public boolean delItem(String ItemName) throws IOException {
     	
         foodDao.deleteById(ItemName);
- 
+     
         return true;
     }
 

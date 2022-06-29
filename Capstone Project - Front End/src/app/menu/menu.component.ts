@@ -51,9 +51,9 @@ export class MenuComponent implements OnInit {
   getTotal():void{
     console.log(this.values);
     let url = "http://localhost:8080/cart";
-    this.modalCart.quantity1=this.values[0].quantity;
-    this.modalCart.quantity2=this.values[1].quantity;
-    this.modalCart.quantity3=this.values[2].quantity;
+    // this.modalCart.quantity1=this.values[0].quantity;
+    // this.modalCart.quantity2=this.values[1].quantity;
+    // this.modalCart.quantity3=this.values[2].quantity;
     this.http.post<number>(url,this.values).subscribe(
 
       res=>{
