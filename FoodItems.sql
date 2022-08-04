@@ -39,4 +39,8 @@ INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES (
 INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('36','Dough Nuts','250','65','https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzc2VydHxlbnwwfHwwfHw%3D&w=1000&q=80');
 INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('37','WaterMelon Popsicle','25','80','https://img.etimg.com/thumb/msid-64864480,width-650,imgsize-381923,,resizemode-4,quality-100/popsicle.jpg');
 INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('38','Vegan Cashew Yogurt','45','20','https://townsquare.media/site/959/files/2022/02/attachment-Cashew-Yogurt-2.jpg');
+<<<<<<< HEAD
 INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('39','Nutella','799','30','https://shreenathfoods.com/uploads/featured_image/F1580729897.jpg');
+=======
+INSERT INTO `kenshin`.`food` (`id`, `item`, `price`, `quantity`, `url`) VALUES ('39','Nutella','799','30','https://shreenathfoods.com/uploads/featured_image/F1580729897.jpg');
+>>>>>>> 8393c8dd521b78d5dfb7092d10c704c4a01a881d
