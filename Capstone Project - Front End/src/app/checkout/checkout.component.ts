@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AppComponent, User} from "../app.component";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
+import { MenuServiceService } from '../menu-service.service';
 
 @Component({
   selector: 'app-checkout',
@@ -10,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router,private menuService:MenuServiceService) { }
 
   user:User = AppComponent.modelUser;
   total:string;
@@ -65,7 +66,7 @@ export class CheckoutComponent implements OnInit {
   changeDB():void{
     if((this.monthVal&&this.yearVal&&this.cvvVal&&this.nameOnCardVal) || (this.cashOnDelivery == 'cashOnDelivery')) {
       if (this.cashOnDelivery != 'cashOnDelivery') {
-        let url = "http://localhost:8080/changeDB";
+        let url = this.menuService.path + "/changeDB";
       this.http.get(url).subscribe(
         res => {
           console.log("DB Updated");

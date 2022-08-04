@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../app.component";
 import {Router} from "@angular/router";
+import { MenuServiceService } from '../menu-service.service';
 
 @Component({
   selector: 'app-merchant-welcome',
@@ -20,7 +21,7 @@ export class MerchantWelcomeComponent implements OnInit {
     merchant:null
   };
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private menuService:MenuServiceService) { }
 
   ngOnInit() {
     if (sessionStorage.getItem("userData")==null) {

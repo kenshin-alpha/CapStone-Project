@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {AppComponent, User} from "../app.component";
+import { MenuServiceService } from '../menu-service.service';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   message:string=null;
 
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router, private menuService:MenuServiceService) { }
 
   ngOnInit() {
     if(sessionStorage.length>0)
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   sendFeedback(): void {
-    let url = "http://localhost:8080/login";
+    let url = this.menuService.path + "/login";
     let key='userData';
     this.http.post<User>(url,this.model).subscribe(
       res => {

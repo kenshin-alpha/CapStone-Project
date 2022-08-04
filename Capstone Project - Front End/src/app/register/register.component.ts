@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AppComponent, User} from "../app.component";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
+import { MenuServiceService } from '../menu-service.service';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router, private menuService:MenuServiceService) { }
 
   model:User={
     username:'',
@@ -34,7 +35,7 @@ export class RegisterComponent implements OnInit {
 
   usernamePresent():void{
     this.fontColor='';
-    let url = "http://localhost:8080/checkUserName";
+    let url = this.menuService.path + "/checkUserName";
 
 
 
@@ -92,7 +93,7 @@ export class RegisterComponent implements OnInit {
   registerUser():void{
     this.updateSelect();
 
-    let url = "http://localhost:8080/register";
+    let url = this.menuService.path + "/register";
     this.http.post<User>(url,this.model).subscribe(
       res=>{
         AppComponent.modelUser =res;

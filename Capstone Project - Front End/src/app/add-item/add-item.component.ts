@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpEventType} from "@angular/common/http";
 import {Router} from "@angular/router";
-
+import { MenuServiceService } from '../menu-service.service';
 @Component({
   selector: 'app-add-item',
   templateUrl: './add-item.component.html',
@@ -18,7 +18,7 @@ export class AddItemComponent implements OnInit {
     fileDataF:null
   };
 
-  constructor(private http:HttpClient, private router:Router) { }
+  constructor(private http:HttpClient, private router:Router, private menuService:MenuServiceService) { }
 
   ngOnInit() {
     if(sessionStorage.length==0)
@@ -36,11 +36,12 @@ export class AddItemComponent implements OnInit {
     if(formData.get('file')==null || formData.get('file')==undefined)
     {
       console.log(formData.get('file'));
-      this.url="http://localhost:8080/addNewItem";
+      
+      this.url=this.menuService.path + "/addNewItem";
     }
     else
     {
-      this.url="http://localhost:8080/addNewItemUrl";
+      this.url=this.menuService.path + "/addNewItemUrl";
     }
     this.http.post(this.url, formData)
       .subscribe(
@@ -63,7 +64,7 @@ export class AddItemComponent implements OnInit {
   present:boolean=null;
 
   checkAvailability() {
-    this.http.post<boolean>("http://localhost:8080/checkItemId",this.newFoodItems.id).subscribe(
+    this.http.post<boolean>(this.menuService.path + "/checkItemId",this.newFoodItems.id).subscribe(
       res=>{
         this.present=res;
       },err=>{
